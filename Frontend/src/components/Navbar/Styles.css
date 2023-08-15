@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #fff;
+}
+
+.content {
+    padding: 20px;
+    margin-left: 250px; /* Adjust as needed based on your side menu width */
+    transition: 0.3s;
+}
