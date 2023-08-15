@@ -21,7 +21,7 @@ function Login() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',fontFamily:"arvo",color:"white",textAlign:"none",backgroundColor:"black" }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',fontFamily:"arvo",color:"white",textAlign:"none",backgroundColor:"black",marginBottom:"150px" }}>
       <h2 style={{fontSize:"38px",color:"white",marginTop:"10%",marginBottom:"30px"}}>Login</h2>
       <form onSubmit={handleSubmit} style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px',height:"330px"}}>
         <div style={{ marginBottom: '10px',marginTop:"20px" }}>

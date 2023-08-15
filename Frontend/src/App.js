@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Signup from './components/Signup.jsx';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Venucard from './components/Venucard';
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
       <Route exact path='/' element={<Content/>}></Route>
       <Route exact path='/login' element={<Login/>}></Route>
       <Route exact path='/signup' element={<Signup/>}></Route>
+      <Route exact path='/venue' element={<Venucard/>}></Route>
       </Routes>
-      <Footer/>
+     
       </BrowserRouter>
-   
+    <Footer/>
     
     
     

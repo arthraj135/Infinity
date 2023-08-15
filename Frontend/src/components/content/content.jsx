@@ -38,8 +38,12 @@ const Content = () => {
           <div style={{width:"fit-content",margin:"auto"}}>
             <br></br>
             <br></br>
-            <Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>
+             <Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>
           </div>
+          <div style={{width:"fit-content",margin:"auto",marginTop:"20px"}}>
+<Link  to={'/venue'} className="btn btn-outline-warning btn-lg" role="button">Check out venues</Link>
+          </div>
+          
         </div>
 
 
