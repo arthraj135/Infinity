@@ -6,13 +6,15 @@ import {FaFacebookSquare} from 'react-icons/fa'
 const Footer = () => {
     return(
         <>
-        <div style={{backgroundColor:"aqua", height:"400px"}}>
-            <div style={{backgroundColor:"red",display:"flex",width:"400px"}}>
-                <h1 style={{fontFamily:"arvo"}}>Infinity</h1>
-                <div>
-                    <a href="">Terms of service</a>
-                    <a href=''>Team</a>
-                </div>
+        <div style={{backgroundColor:"rgb(10,10,10)", height:"200px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+            <div style={{display:"flex",width:"300px",height:"190px",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+                <br />
+                <h1 style={{fontFamily:"arvo",color:"white"}}>Infinity</h1>
+                <br />
+                <div style={{fontFamily:"arvo",fontSize:"19px",color:"white"}}>Terms of service</div>
+                <br />
+                <div style={{display:"flex",gap:"10px",height:"90px",color:"white",fontSize:"28px"}}><div><GrYoutube/></div><div><BiLogoInstagramAlt/></div><div><FaFacebookSquare/></div></div>
+                <br />
             </div>
         </div>
         </>

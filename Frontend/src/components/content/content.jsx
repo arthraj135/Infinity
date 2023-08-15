@@ -5,17 +5,14 @@ import f2 from '../image/f2.jpg'
 import f3 from '../image/f3.jpg'
 import team from '../image/team.jpg'
 import {Helmet} from 'react-helmet';
-import './content.css'
+import {Link} from 'react-router-dom'
 
 
 const Content = () => {
   return (
     <>
     <div>
-      <Helmet>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta charset="UTF-8"/>
-      </Helmet>
+      
   
       <div style={{class: "flexbox,background-container", backgroundImage: `url(${test})`, height: "660px" }}>
 
@@ -38,10 +35,10 @@ const Content = () => {
             </div>
           </div>
 
-          <div>
+          <div style={{width:"fit-content",margin:"auto"}}>
             <br></br>
             <br></br>
-            <a class="btn btn-outline-warning btn-lg" href="#" role="button">Join Now</a>
+            <Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>
           </div>
         </div>
 
@@ -55,11 +52,11 @@ const Content = () => {
         </div>
       </div>
       <br></br>
-        <div style={{color:"white", fontFamily: "serif", fontWeight: "400", fontSize: "25px", height:"200px",backgroundColor: "black"}}>
+        <div style={{color:"white", fontFamily: "serif", fontWeight: "400", fontSize: "25px", height:"200px",backgroundColor: "black",width:"fit-content",margin:"auto"}}>
           - Harshit Gera
         </div>
 
-      <h1 style={{color:"white", fontFamily: "serif",fontSize:"55px"}}>Featured</h1>
+      <h1 style={{color:"white", fontFamily: "serif",fontSize:"55px",width:"fit-content",margin:"auto"}}>Featured</h1>
       <br />
       <div style={{backgroundColor:"black", display:"flex",justifyContent:"center",alignItems:"center",gap:"40px"}}>
         <div>
