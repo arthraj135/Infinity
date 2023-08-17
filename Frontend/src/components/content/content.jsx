@@ -8,7 +8,7 @@ import {Helmet} from 'react-helmet';
 import {Link} from 'react-router-dom'
 
 
-const Content = () => {
+const Content = (props) => {
   return (
     <>
     <div>
@@ -38,7 +38,7 @@ const Content = () => {
           <div style={{width:"fit-content",margin:"auto"}}>
             <br></br>
             <br></br>
-             <Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>
+             {props.userdata?(<Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>):(<div>{props.userdata.username}</div>)}
           </div>
           <div style={{width:"fit-content",margin:"auto",marginTop:"20px"}}>
 <Link  to={'/venue'} className="btn btn-outline-warning btn-lg" role="button">Check out venues</Link>
