@@ -13,7 +13,7 @@ const Footer = () => {
                 <br />
                 <h1 style={{fontFamily:"arvo",color:"white"}}>Infinity</h1>
                 <br />
-                <div style={{fontFamily:"arvo",fontSize:"19px",color:"white"}}><Link to={'/terms'}>Terms of service</Link></div>
+                <div style={{fontFamily:"arvo",fontSize:"19px",color:"white"}}><Link to='/terms'>Terms of service</Link></div>
                 <br />
                 <div style={{display:"flex",gap:"10px",height:"90px",color:"white",fontSize:"28px"}}><div><GrYoutube/></div><div><BiLogoInstagramAlt/></div><div><FaFacebookSquare/></div></div>
                 <br />
