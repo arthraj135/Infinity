@@ -6,10 +6,10 @@ import venue4 from "../components/image/CityScape_Auction.png"
 
 const Venucard = () => {
     let venue_array = [
-        { title: "venue1", date: "1/10/21", min_bid: "1,500$", img: venue1 },
-        { title: "venue2", date: "12/11/23", min_bid: "2,000$", img: venue2 },
-        { title: "venue3", date: "10/10/22", min_bid: "10,000$", img: venue3 },
-        { title: "venue4", date: "1/1/1", min_bid: "1000$", img: venue4 }
+        { title: "UrbanGavel", date: "1/10/21", min_bid: "1,500$", img: venue1 },
+        { title: "CityScape Auction", date: "12/11/23", min_bid: "2,000$", img: venue2 },
+        { title: "CharmCity Bidding", date: "10/10/22", min_bid: "10,000$", img: venue3 },
+        { title: "Prestige Plaza Auctions", date: "1/1/1", min_bid: "1000$", img: venue4 }
       ];
   return (
     <>
@@ -21,7 +21,7 @@ const Venucard = () => {
 
             </div>
             <div style={{fontSize:"36px",marginTop:"50px",maxWidth:"50%"}}>
-                Venue Title: {venue_array.title}
+                 {venue_array.title}
                 <div style={{fontSize:"18px"}}>
                     <div style={{fontSize:"26px"}}>Venue Description:</div>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum sequi blanditiis quibusdam reprehenderit architecto expedita commodi modi suscipit nisi. Necessitatibus corporis rem autem soluta doloribus recusandae odio eum itaque praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis rem impedit autem hic culpa illo ipsa at sequi, voluptatibus, cumque ratione dolore eveniet laborum ullam maxime unde in magni quae!

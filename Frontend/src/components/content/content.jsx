@@ -50,7 +50,7 @@ const Content = () => {
 
       </div>
 
-      <div style={{class: "flexbox",backgroundColor: "black", height:"300px",alignContent: "center",display:"flex",justifyContent:"center",placeItems:"end normal"}}>
+      <div style={{backgroundColor: "black", height:"300px",alignItems: "center",display:"flex",justifyContent:"center",placeItems:"end normal",textAlign:"center"}}>
         <div style={{color:"white", fontFamily: "serif", fontWeight: "400", fontSize: "32px", width:"900px"}}>
         Infinity's auction services in Delhi are top-notch. Their team is knowledgeable, professional, and always goes the extra mile to ensure a smooth bidding process. Thank you for making my auction experience a great one!
         </div>
@@ -63,17 +63,17 @@ const Content = () => {
       <h1 style={{color:"white", fontFamily: "serif",fontSize:"55px",width:"fit-content",margin:"auto"}}>Featured</h1>
       <br />
       <div style={{backgroundColor:"black", display:"flex",justifyContent:"center",alignItems:"center",gap:"40px"}}>
-        <div>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
           <img src={f1} alt="Auction Events" style={{borderRadius:"5%"}} height="310px"/>
           <div style={{color:"white",fontSize:"35px",fontFamily:"serif",fontWeight:"400"}}>Unique Auction Events</div>
           <div style={{color:"white"}}>Experience a variety of one-of-a-kind auction events in Delhi.</div>
         </div>
-        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center"}}>
           <img src={f2} alt="Flower" style={{borderRadius:"5%"}} height="310px"/>
           <div style={{color:"white",fontSize:"35px",fontFamily:"serif",fontWeight:"400"}}>Expert Auctioneers</div>
           <div style={{color:"white",width:"80%"}}>Benefit from our team of experienced auctioneers for seamless bidding processes.</div>
         </div>
-        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center"}}>
           <img src={f3} alt="Antique vase" style={{borderRadius:"5%"}} height="310px"/>
           <div style={{color:"white",fontSize:"35px",fontFamily:"serif",fontWeight:"400"}}>Extensive Collection</div>
           <div style={{color:"white", width:"80%"}}>Explore our extensive collection of rare and valuable items up for auction.</div>
@@ -97,9 +97,9 @@ const Content = () => {
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
       <div style={{display:"flex", justifyContent:"center",alignItems:"center", gap:"120px", fontFamily:"sans-serif", fontSize:"35px", color:"white", fontWeight:"540"}}>
-        <div style={{width:"400px"}}>Over 1000 successful auctions</div>
-        <div style={{width:"450px"}}>Highest bidder satisfaction rate</div>
-        <div style={{width:"400px"}}>Trusted by top auction houses</div>
+        <div style={{width:"400px",textAlign:"center"}}>Over 1000 successful auctions</div>
+        <div style={{width:"450px",textAlign:"center"}}>Highest bidder satisfaction rate</div>
+        <div style={{width:"400px",textAlign:"center"}}>Trusted by top auction houses</div>
       </div>
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
