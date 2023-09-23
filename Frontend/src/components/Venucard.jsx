@@ -1,16 +1,45 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import venue1 from "../components/image/UrbanGavel.png"
 import venue2 from "../components/image/Capital_Elite_Auctions.png"
 import venue3 from "../components/image/CharmCity_Bidding.png"
 import venue4 from "../components/image/CityScape_Auction.png"
-
-const Venucard = () => {
+import axios from 'axios'
+import { toast, ToastContainer } from 'react-toastify';
+const Venucard = (props) => {
     let venue_array = [
         { title: "UrbanGavel", date: "1/10/21", min_bid: "1,500$", img: venue1 },
         { title: "CityScape Auction", date: "12/11/23", min_bid: "2,000$", img: venue2 },
         { title: "CharmCity Bidding", date: "10/10/22", min_bid: "10,000$", img: venue3 },
-        { title: "Prestige Plaza Auctions", date: "1/1/1", min_bid: "1000$", img: venue4 }
+        { title: "Prestige Plaza Auctions", date: "1/11/21", min_bid: "1000$", img: venue4 }
       ];
+
+
+
+    useEffect(()=>{
+        var formData = {
+   
+            password: props.userdata.password,
+            email: props.userdata.email,
+            booking: props.booking_array
+        
+        };
+        axios.post('http://localhost:3001/users/book',formData).then((response)=>{
+            console.log(response)
+            
+         
+   }
+  
+   ).catch((error) => {
+       console.error(error);
+     });
+
+    },[props.booking_array])
+    
+
+   
+   
+   
+    
   return (
     <>
     {venue_array.map((venue_array)=>{
@@ -34,10 +63,11 @@ const Venucard = () => {
                 </div>
                 <div style={{fontSize:"20px",marginTop:"40px",textAlign:"end"}}>
                 <button className="btn btn-outline-warning btn-lg" type="submit" style={{padding:"5px",width:"150px",position:"relative",right:"20px"}}>Wishlist</button>
-                   <button className="btn btn-outline-warning btn-lg" type="submit" style={{padding:"5px",width:"150px"}}>Book Slot</button>
+                   <button className="btn btn-outline-warning btn-lg" type="submit" style={{padding:"5px",width:"150px"}}onClick={()=>{props.appendfn(venue_array);toast.success("Booking success")}}>Book Slot</button>
                 </div>
             </div>
         </div>
+        <ToastContainer/>
     </div>)
     })}
     

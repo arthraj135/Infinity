@@ -30,8 +30,10 @@ function Login(props) {
                 onClose: () => {
         
                   props.setuserdata(response.data)
-  
+                 
+                  console.log(response.data)
                     setTimeout(() => {
+                      props.setLoggedin(true)
                         navigate('/');
                     }, 2000);
                 },
@@ -51,11 +53,11 @@ function Login(props) {
         <div style={{ marginBottom: '10px',marginTop:"20px" }}>
           Email:
           
-        </div><input type="text" name='email' value={formData.email} onChange={handleChange} style={{ width: '100%', padding: '5px',marginBottom:"20px",borderRadius:"5px",backgroundColor:"#161515", border: '1px solid #ffc107' }} />
+        </div><input type="text" name='email' value={formData.email} onChange={handleChange} style={{ width: '100%', padding: '5px',marginBottom:"20px",borderRadius:"5px",backgroundColor:"#161515", border: '1px solid #ffc107',color:"white" }} />
         <div style={{ marginBottom: '10px',marginTop:"10px" }}>
           Password:
           
-        </div><input type="password"  name='password' value={formData.password} onChange={handleChange} style={{ width: '100%', padding: '5px',borderRadius:"5px" ,backgroundColor:"#161515", border: '1px solid #ffc107' }} />
+        </div><input type="password"  name='password' value={formData.password} onChange={handleChange} style={{ width: '100%', padding: '5px',borderRadius:"5px" ,backgroundColor:"#161515", border: '1px solid #ffc107',color:"white" }} />
         <div style={{marginTop:"5px",fontSize:"14px",textAlign:"end"}}>Forgot password?</div>
         <button className="btn btn-outline-warning btn-lg" type="submit" style={{ marginTop: '15px', cursor: 'pointer',width:"100px",marginLeft:"80px",border:"3px solid #ffc107" }}>Login</button>
       </form>

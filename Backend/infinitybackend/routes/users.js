@@ -29,7 +29,7 @@ router.post('/login', async(req, res, next)=> {
      const {email,password}=req.body
   const user= await Users.findOne({email,password}).exec()
   if(user){
-    res.json({username:user.username,email:user.email,phone:user.phone})
+    res.json({username:user.username,email:user.email,phone:user.phone,password:user.password,booking:user.booking})
   }
   else{
    
@@ -42,5 +42,25 @@ router.post('/login', async(req, res, next)=> {
  }
 
 });
+
+router.post('/book',async (req,res,next)=>{
+  try{
+    const {email,password,booking}=req.body
+    const exs=await Users.findOne({email,password}).exec()
+    if(exs){
+      const book=await Users.findOneAndUpdate({email,password},{$set:{booking:booking}})
+      if(book){
+        res.send(book)
+      }
+      else{
+        res.send('failure')
+      }
+    }
+    
+  }
+  catch(err){
+    res.send(err)
+  }
+})
 
 module.exports = router; 

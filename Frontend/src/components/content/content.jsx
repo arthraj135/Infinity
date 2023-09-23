@@ -37,12 +37,15 @@ const Content = (props) => {
 
           <div style={{width:"fit-content",margin:"auto"}}>
             <br></br>
-            <br></br>
-             {props.userdata?(<Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>):(<div>{props.userdata.username}</div>)}
+            
+             {props.isLoggedin?(<div style={{fontSize:"24px",color:"white",fontWeight:"500"}}>Hi, {props.userdata.username}</div>):(<Link to={'/login'} className="btn btn-outline-warning btn-lg" role="button">Join Now</Link>)}
           </div>
           <div style={{width:"fit-content",margin:"auto",marginTop:"20px"}}>
 <Link  to={'/venue'} className="btn btn-outline-warning btn-lg" role="button">Check out venues</Link>
           </div>
+          {props.isLoggedin?(<div style={{width:"fit-content",margin:"auto",marginTop:"20px"}}>
+<Link  to={'/mybookings'} className="btn btn-outline-warning btn-lg" role="button">View your bookings</Link>
+          </div>):(<></>)}
           
         </div>
 
